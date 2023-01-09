@@ -1,0 +1,49 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNsM18gBGKPw7XSzlBPD8Ro",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sergiomunyoz/GPU_vs_CPU_CNN_cifar100.ipynb/blob/main/TRANSFORMADA_FOURIER_TUTORIAL\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3_nUUN307oSR"
+      },
+      "outputs": [],
+      "source": [
+        "from scipy.fft import fft, ifft\n",
+        "import numpy as np\n",
+        "x = np.array([1.0, 2.0, 1.0, -1.0, 1.5])\n",
+        "y = fft(x)\n",
+        "y\n",
+        "\n",
+        "yinv = ifft(y)\n",
+        "yinv\n",
+        "array([ 1.0+0.j,  2.0+0.j,  1.0+0.j, -1.0+0.j,  1.5+0.j])"
+      ]
+    }
+  ]
+}
